@@ -7,17 +7,18 @@ public class UseCourse {
 		CollegeCourse course = new CollegeCourse();
 		course.setDepartment(JOptionPane.showInputDialog(null, "Department: "));
 		course.setCourseNumber(Integer.parseInt(JOptionPane.showInputDialog(null, "Course Number: ")));
-		course.setCost(Integer.parseInt(JOptionPane.showInputDialog(null, "Cost: ")));
+		course.setCredits(Integer.parseInt(JOptionPane.showInputDialog(null, "Credits: ")));
 		
-		int cost = course.getCost();
+		final int CREDITCOST = 120;
+		
+		int cost = course.getCredits() * CREDITCOST;
 		
 		if(course.getDepartment().equals("SCI")||course.getDepartment().equals("BIO")||
 				course.getDepartment().equals("CHM")||course.getDepartment().equals("CIS")||
 				course.getDepartment().equals("PHY")) {
-			LabCourse labCourse = new LabCourse();
-			labCourse.setLabFee(50);
-			cost += labCourse.getLabFee();
+			cost += 50;
 		}
+		
 		JOptionPane.showMessageDialog(null, "Department: " + course.getDepartment() +
 				"\n Course Number: " + course.getCourseNumber() + "\n Cost: " + cost);
 	}

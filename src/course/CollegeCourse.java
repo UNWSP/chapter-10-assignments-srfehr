@@ -14,12 +14,12 @@ public class CollegeCourse {
 	public void setCourseNumber(int courseNumber) {
 		this.courseNumber = courseNumber;
 	}
-	public int getCost() {
-		return cost;
+	public int getCredits() {
+		return credits;
 	}
-	public void setCost(int cost) {
-		this.cost = cost;
+	public void setCredits(int credits) {
+		this.credits = credits;
 	}
-	int courseNumber, cost;
+	int courseNumber, credits;
 	
 }
